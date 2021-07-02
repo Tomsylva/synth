@@ -9,6 +9,7 @@ function HomePage() {
       .openMidiIn("Playtron")
       .then(console.log("Playtron connected"));
     console.log("PORT INFO: ", midiPort.info());
+    midiPort.close().then(console.log("MIDI PORT CLOSED"));
   };
 
   const onFail = function () {
