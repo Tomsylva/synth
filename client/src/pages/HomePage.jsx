@@ -1,7 +1,22 @@
 import logo from "../logo.svg";
 import "../App.css";
+import * as JZZ from "jzz";
 
 function HomePage() {
+  const onSuccess = function () {
+    console.log("MIDI SUCCESS");
+    const midiPort = JZZ()
+      .openMidiIn("Playtron")
+      .then(console.log("Playtron connected"));
+    console.log("PORT INFO: ", midiPort.info());
+  };
+
+  const onFail = function () {
+    console.log("MIDI FAIL");
+  };
+
+  JZZ.requestMIDIAccess().then(onSuccess, onFail);
+
   return (
     <div className="App">
       <header className="App-header">
