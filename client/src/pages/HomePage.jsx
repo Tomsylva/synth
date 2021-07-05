@@ -1,15 +1,23 @@
-import logo from "../logo.svg";
 import "../App.css";
 import * as JZZ from "jzz";
 
 function HomePage() {
   const onSuccess = function () {
-    console.log("MIDI SUCCESS");
     const midiPort = JZZ()
       .openMidiIn("Playtron")
-      .then(console.log("Playtron connected"));
+      .then(console.log("Playtron connected"), (midiPort) => {
+        midiPort
+          .noteOn(0, "C2", 127)
+          .then(console.log("NOTEON"))
+          .wait(500)
+          .noteOff(0, "C2")
+          .close()
+          .then(console.log("NOTEOFF"));
+      });
     console.log("PORT INFO: ", midiPort.info());
-    midiPort.close().then(console.log("MIDI PORT CLOSED"));
+    // const closeMidi = function () {
+    //   midiPort.close().then(console.log("MIDI PORT CLOSED"));
+    // };
   };
 
   const onFail = function () {
@@ -20,20 +28,7 @@ function HomePage() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>PLAYTRON SYNTH</h1>
     </div>
   );
 }
