@@ -28,7 +28,7 @@ function HomePage() {
 
   return (
     <div className="App">
-      <h1>PLAYTRON SYNTH</h1>
+      <h1 id="maintitle">PLAYTRON SYNTH</h1>
     </div>
   );
 }
