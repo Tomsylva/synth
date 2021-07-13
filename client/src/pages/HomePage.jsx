@@ -10,7 +10,6 @@ function HomePage() {
     console.log("OUTPUTS: ", outputs);
     for (let input of inputs.values()) {
       input.onmidimessage = getMIDIMessage;
-      console.log("HERE");
     }
     function getMIDIMessage(midiMessage) {
       console.log(midiMessage);
