@@ -23,7 +23,6 @@ function HomePage() {
           if (velocity > 0) {
             // JZZ.noteOn(note, velocity);
             console.log("NOTE ON", note);
-            console.log("NOTE TYPE: ", typeof note);
           } else {
             // JZZ.noteOff(note);
             console.log("NOTE OFF");
@@ -36,6 +35,10 @@ function HomePage() {
       }
     }
 
+    // NOTE IS NUMBER
+    // IF CASE FOR EACH NUMBER OR
+    // SET UP AN OBJECT OF NOTE NUMBERS AND ACCOMPANYING SOUNDS AND REFERENCE
+    // CHECK OUT https://github.com/jonobr1/Neuronal-Synchrony/blob/master/src/main.js LINE 329
     // 36 37 38 39
     // 40 41 42 43
     // 44 45 46 47
