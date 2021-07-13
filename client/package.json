@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
     "jzz": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
