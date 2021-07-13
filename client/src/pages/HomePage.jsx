@@ -23,6 +23,7 @@ function HomePage() {
           if (velocity > 0) {
             // JZZ.noteOn(note, velocity);
             console.log("NOTE ON", note);
+            console.log("NOTE TYPE: ", typeof note);
           } else {
             // JZZ.noteOff(note);
             console.log("NOTE OFF");
@@ -34,6 +35,11 @@ function HomePage() {
           break;
       }
     }
+
+    // 36 37 38 39
+    // 40 41 42 43
+    // 44 45 46 47
+    // 48 49 50 51
 
     // const midiPort = JZZ()
     //   .openMidiIn("Playtron")
