@@ -17,7 +17,11 @@ function HomePage() {
       const note = midiMessage.data[1];
       const velocity = midiMessage.data.length > 2 ? midiMessage.data[2] : 0;
       const instruments = {
-        36: { instrumentName: "KICK", image: "#", sound: "#" },
+        36: {
+          instrumentName: "KICK",
+          image: "synth/client/public/pngegg.png",
+          sound: "#",
+        },
         37: { instrumentName: "SNARE", image: "#", sound: "#" },
         38: { instrumentName: "HATS", image: "#", sound: "#" },
         39: { instrumentName: "CRASH", image: "#", sound: "#" },
