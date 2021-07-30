@@ -81,12 +81,12 @@ function HomePage() {
     <div className="App">
       {page === "home" ? (
         <div>
-          <h1>PLAYTRON SYNTH!!</h1>
-          <button onClick={loadSynth}>Let's get started!</button>
+          <h1>Beepo</h1>
+          <button onClick={loadSynth}>Let's go!</button>
         </div>
       ) : (
         <div className="snyth-page">
-          {touchMe ? <h3>Go on, touch me...</h3> : null}
+          {touchMe ? <h3>Make some noise...</h3> : null}
           {currentInstrument ? (
             <motion.div
               initial="visible"
